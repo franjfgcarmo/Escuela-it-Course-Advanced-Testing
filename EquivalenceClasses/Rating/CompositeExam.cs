@@ -3,7 +3,15 @@ namespace EquivalenceClasses.Rating;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-
+/// <summary>
+/// programación: min:5 per: 100% not: 5.9
+/// teoría min: 7 per:30% not: 8
+/// practica min:4 per: 70% not: 5
+/// 
+/// programación: min:5 per: 100% not: NotQ
+/// teoría min: 7 per:30% not: 6 => notQ
+/// practica min:4 per: 70% not: 8
+/// </summary>
 public class CompositeExam : Exam
 {
     private Dictionary<string, Exam> exams;
@@ -38,7 +46,7 @@ public class CompositeExam : Exam
         }
     }
 
-    private bool DifferentNames(List<Exam> exams)
+    private bool DifferentNames(IEnumerable<Exam> exams)
     {
         var examNames = exams.Select(exam => exam.GetName()).ToList();
         examNames.Sort();

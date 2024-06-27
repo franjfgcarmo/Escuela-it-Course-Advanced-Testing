@@ -26,11 +26,11 @@ public class Rate
         _percent = percent;
     }
         
-    public Rate(double percent) : this(0, percent)
+    public Rate(double percent) : this(0, percent)//no minimum
     {
     }
         
-    public Rate() : this(0, 1)
+    public Rate() : this(0, 1)// normal. 100
     {
     }
         
