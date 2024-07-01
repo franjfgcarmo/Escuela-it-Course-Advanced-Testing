@@ -4,7 +4,7 @@ namespace EquivalenceClasses.Rating;
 
 public abstract class Exam
 {
-    protected string ExamName;
+    protected string  ExamName;
     protected readonly Rate Rate;
 
     protected Exam(string examName, Rate rate)
@@ -42,7 +42,7 @@ public abstract class Exam
 
     public double GetResult()
     {
-        if (IsQualifiable())
+        if (!IsQualifiable())
         {
             throw new InvalidOperationException("The exam is not qualifiable");
         }
