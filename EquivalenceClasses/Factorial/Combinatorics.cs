@@ -1,6 +1,4 @@
-using System.Diagnostics;
-
-namespace BoundaryValues.Factorial;
+namespace EquivalenceClasses.Factorial;
 
 
 public class Combinatorics

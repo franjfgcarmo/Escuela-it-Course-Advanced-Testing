@@ -1,4 +1,4 @@
-namespace BoundaryValues.Day;
+namespace EquivalenceClasses.Day;
 
 public enum Day
 {
