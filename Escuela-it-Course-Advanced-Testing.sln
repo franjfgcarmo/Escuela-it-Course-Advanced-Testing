@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EquivalenceClasses", "Equiv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoundaryValues", "BoundaryValues\BoundaryValues.csproj", "{5BD1878F-BA3F-4D32-914A-EFF278E5C21B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Characteristics", "Characteristics\Characteristics.csproj", "{F7BDE50A-57C1-4FA0-9B38-D09BC07BD2FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{5BD1878F-BA3F-4D32-914A-EFF278E5C21B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BD1878F-BA3F-4D32-914A-EFF278E5C21B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BD1878F-BA3F-4D32-914A-EFF278E5C21B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7BDE50A-57C1-4FA0-9B38-D09BC07BD2FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7BDE50A-57C1-4FA0-9B38-D09BC07BD2FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7BDE50A-57C1-4FA0-9B38-D09BC07BD2FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7BDE50A-57C1-4FA0-9B38-D09BC07BD2FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

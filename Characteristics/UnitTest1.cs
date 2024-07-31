@@ -1,4 +1,4 @@
-namespace BoundaryValues;
+namespace Characteristics;
 
 public class UnitTest1
 {

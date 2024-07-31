@@ -31,17 +31,14 @@ public class TurnTest
     private List<int> GetExpectedValues(int size, int loops, List<int> resultValues)
     {
         List<int> expectedValues = new List<int>();
-        for (int i = 0; i < loops; i++)
-        {
-            for (int j = 0; j < size; j++)
-            {
+        for (int i = 0; i < loops; i++) {
+            for (int j = 0; j < size; j++) {
                 expectedValues.Add(j);
             }
         }
-        while (resultValues[0] != expectedValues[0])
-        {
-            expectedValues.RemoveAt(0);
+        while (resultValues[0] != expectedValues[0]) {
             expectedValues.Add(expectedValues[0]);
+            expectedValues.RemoveAt(0);
         }
         return expectedValues;
     }
