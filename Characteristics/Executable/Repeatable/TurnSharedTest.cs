@@ -1,32 +1,33 @@
+using FluentAssertions;
+
 namespace Characteristics.Executable.Repeatable;
 
-[TestFixture]
-public class TurnSharedTest
+public class TurnSharedTest : IClassFixture<Turn>
 {
-    private static Turn sharedTurn;
+    Turn _sharedTurn;
 
-    [OneTimeSetUp]
-    public static void SetUp()
+    public TurnSharedTest(Turn fixture)
     {
-        sharedTurn = new Turn();
+        _sharedTurn = fixture;
     }
 
-    [Test]
-    public void TestTurn()
-    {
-        Assert.AreEqual(Color.XS, sharedTurn.Take());
-    }
-
-    [Test]
+    [Fact]
     public void TestChange()
     {
-        sharedTurn.Change();
-        Assert.AreEqual(Color.OS, sharedTurn.Take());
-        sharedTurn.Change();
-        Assert.AreEqual(Color.XS, sharedTurn.Take());
-        sharedTurn.Change();
-        Assert.AreEqual(Color.OS, sharedTurn.Take());
-        sharedTurn.Change();
-        Assert.AreEqual(Color.XS, sharedTurn.Take());
+        _sharedTurn.Change();
+        _sharedTurn.Take().Should().Be(Color.OS);
+        _sharedTurn.Change();
+        _sharedTurn.Take().Should().Be(Color.XS);
+        _sharedTurn.Change();
+        _sharedTurn.Take().Should().Be(Color.OS);
+        _sharedTurn.Change();
+        _sharedTurn.Take().Should().Be(Color.XS);
+    }
+    
+    [Fact]
+    public void TestTurn()
+    {
+        _sharedTurn.Take().Should().Be(Color.XS);
+        _sharedTurn.Change();
     }
 }

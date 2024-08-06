@@ -1,6 +1,6 @@
 namespace Characteristics.Executable.Repeatable;
 
-public class Turn
+public class Turn: IDisposable
 {
     private int currentValue;
 
@@ -27,5 +27,10 @@ public class Turn
     public override string ToString()
     {
         return $"Turn [value={currentValue}]";
+    }
+
+    public void Dispose()
+    {
+        // TODO release managed resources here
     }
 }
