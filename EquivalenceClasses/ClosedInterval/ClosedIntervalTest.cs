@@ -38,6 +38,7 @@ public class ClosedIntervalTest
         _closedInterval.Includes(new ClosedInterval(-1, 1)).Should().BeTrue();
         _closedInterval.Includes(new ClosedInterval(0, 7)).Should().BeFalse();
         _closedInterval.Includes(new ClosedInterval(7, 9)).Should().BeFalse();
+        _closedInterval.Includes(new ClosedInterval(-7, 7)).Should().BeFalse();
     }
 
     [Fact]

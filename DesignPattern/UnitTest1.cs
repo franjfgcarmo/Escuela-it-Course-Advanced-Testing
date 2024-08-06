@@ -26,19 +26,19 @@ public class OrderTest
             .Build();
         output.WriteLine(order.ToString());
 //Combining with linq expressions
-        List<Order[]> orders = Enumerable
-                .Range(1, 10)
-                .Select(number => OrderBuilder.Empty()
-                    .WithNumber(number)
-                    .CreatedOn(DateTime.Today)
-                    .ShippingTo(b => b
-                        .Street("street")
-                        .Zip("zip")
-                        .City("city")
-                        .Country("country"))
-                    .Build())
-                .Chunk(2)
-                .ToList()
-            ));
+        // List<Order[]> orders = Enumerable
+        //         .Range(1, 10)
+        //         .Select(number => OrderBuilder.Empty()
+        //             .WithNumber(number)
+        //             .CreatedOn(DateTime.Today)
+        //             .ShippingTo(b => b
+        //                 .Street("street")
+        //                 .Zip("zip")
+        //                 .City("city")
+        //                 .Country("country"))
+        //             .Build())
+        //         .Chunk(2)
+        //         .ToList()
+        //     ));
     }
 }
