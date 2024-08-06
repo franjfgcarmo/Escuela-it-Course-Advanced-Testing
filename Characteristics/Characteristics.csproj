@@ -25,6 +25,7 @@
 
     <ItemGroup>
       <Folder Include="Executable\Fast\" />
+      <Folder Include="Readable\Simple\overprotectiveTests\" />
       <Folder Include="Risk\SafetyNet\" />
     </ItemGroup>
 
