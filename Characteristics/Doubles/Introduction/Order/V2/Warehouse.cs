@@ -28,7 +28,7 @@ public class Warehouse
         return products.TryGetValue(name, out int inventory) ? inventory : 0;
     }
 
-    public void Remove(string name, int amount)
+    public virtual void Remove(string name, int amount)
     {
         if (products.ContainsKey(name))
         {
